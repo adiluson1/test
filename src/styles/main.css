@@ -1,1 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+.logo, .comments__title, .comment__body{
+    text-align: center;
+}

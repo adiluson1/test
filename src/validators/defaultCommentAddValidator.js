@@ -1,5 +1,4 @@
 export default function validator (comment, callback) { //validator will check comment arguments and if arguments wrong will call callback
-    console.log(arguments);
     let nameValid = nameValidator(comment.name);
     callback({name: 'name', val: !nameValid});
 

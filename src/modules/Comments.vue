@@ -5,7 +5,7 @@
             <div class="comments__body">
                 <div class="columns is-multiline">
                     <template v-for="(comment,ind) in comments">
-                        <div class="column comment__gap is-one-third" :key="ind"><Comment :item="comment" :index="ind"/></div>
+                        <router-link :to="`/comments/${comment.id}`" class="column comment__gap is-one-third" :key="ind"><Comment :item="comment" :index="ind"/></router-link>
                     </template>
                 </div>
             </div>

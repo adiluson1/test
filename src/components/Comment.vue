@@ -4,7 +4,7 @@
             <h4 class="title comment__header_title is-4">{{item.name}}</h4>
         </div>
         <div class="comment__body" v-bind:class="{'comment__body-dark': isDark()}">
-            <h5 class="title is-5 comment__body_mail">{{ item.mail }}</h5>
+            <h5 class="title is-5 comment__body_mail">{{ item.email }}</h5>
             <p class="subtitle is-6 comment__body_description">{{ item.description }}</p>
         </div>
     </div>
@@ -25,7 +25,7 @@
         },
         methods:{
             isDark(){
-                return !this.index % 2
+                return this.index % 2 !== 0
             }
         }
     }
@@ -33,7 +33,7 @@
 
 <style scoped>
 .comment{
-    max-width: 300px;
+    //max-width: 300px;
 }
 .comment__header{
     background: rgb(87, 172, 81);

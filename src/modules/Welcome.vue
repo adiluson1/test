@@ -24,7 +24,7 @@
 <style scoped>
 .welcome{
     background: rgb(44, 48, 53);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

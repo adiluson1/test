@@ -6,7 +6,7 @@ export default class CommentsRepository {
 
     getById(id){
         return this.comments.find(function (comment) {
-            return comment.id === id;
+            return comment.id == id;
         });
     }
 
@@ -22,6 +22,12 @@ export default class CommentsRepository {
         let commentsLength = this.comments.length;
         newComment.id = commentsLength > 0 ? this.comments[commentsLength - 1].id + 1 : 1;
         this.comments.push(newComment);
+        this.storage.setItem('comments',JSON.stringify(this.comments))
+    }
+    unshift(newComment){
+        let commentsLength = this.comments.length;
+        newComment.id = commentsLength > 0 ? this.comments[commentsLength - 1].id + 1 : 1;
+        this.comments.unshift(newComment);
         this.storage.setItem('comments',JSON.stringify(this.comments))
     }
 }

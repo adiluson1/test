@@ -13,7 +13,7 @@ export default new Vuex.Store({
   mutations: {
     pushComment(state,newComment){
       const repo = repositories.commentsRepository;
-      repo.push(newComment);
+      repo.unshift(newComment);
       state.comments = repo.getAll();
     },
     setError(state,obj){
